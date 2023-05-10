@@ -43,7 +43,7 @@ public class Calculator {
             default:
                 throw new IllegalCharsetNameException("введен неверный оператор");
         }
-            if (parts.length != 2) {
+            if (parts.length != 3) {
                 throw new IllegalArgumentException("допустимы только 2 операнда и 1 оператор");
             }
         if (a < 0 || a > 11 || b < 0 || b > 11) {
@@ -58,12 +58,12 @@ public class Calculator {
                     throw new NullPointerException("результат не должен быть меньше 0 ");
                 }
             }
-
             if(isRoman) {
                 System.out.println(converter.intToRoman(result));
-            }else {
-                System.out.println(result);
             }
+            }else {
+               throw new IllegalArgumentException("одновременно может использоваться только одна система счисления");
+            }
+            return input;
         }
-        return input;
- } }
+    }
