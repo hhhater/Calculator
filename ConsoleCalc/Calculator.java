@@ -58,8 +58,8 @@ public class Calculator {
                     throw new NullPointerException("результат не должен быть меньше 0 ");
                 }
             }
-            if(isRoman) {
-                System.out.println(converter.intToRoman(result));
+            if(!isRoman) {
+                System.out.println(result);
             }
             }else {
                throw new IllegalArgumentException("одновременно может использоваться только одна система счисления");
